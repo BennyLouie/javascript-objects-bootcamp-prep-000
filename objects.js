@@ -10,5 +10,10 @@ function destructivelyUpdateObjectWithKeyAndValue(obj, key, value) {
 }
 
 const recipe = {eggs:3}
-destructivelyUpdateObjectWithKeyAndValue(recipe, 'flour', '3 cups')
+
+function updateObjectsWithKeyAndValue(obj, key, value) {
+  return Object.assign({}, obj, {[key]: value})
+}
+
+console.log(updateObjectsWithKeyAndValue(recipe, 'chocolate', '1 cup'))
 console.log(recipe)
